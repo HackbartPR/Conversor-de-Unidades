@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- SELECIONAR QUAL GRANDEZA TRABALAHR-->
+        <select
+          id="slcGrandeza"
+          name="grandeza"
+          onchange="Pegar_Selecionado(this)"
+        >
+          <option value="area">Área</option>
+          <option value="massa" selected>Massa</option>
+          <option value="volume">Volume</option>
+        </select>
+        <!---->
+        <div class="div_input">
+          <input id="fstInput" type="text" onchange="Calcular(this)" />
+          <span class="span_igual">=</span>
+          <input id="scdInput" type="text" onchange="Calcular(this)" />
+          <!--GRANDEZA INICIAL-->
+          <select id="undInicial" name="undInicial" onclick="Limpar_Display()">
+            <option value="valueOne"></option>
+          </select>
+          <span class="span_branco"></span>
+          <!--GRANDEZA FINAL-->
+          <select id="undFinal" name="undFinal" onclick="Limpar_Display()">
+            <option value="valueOne"></option>
+          </select>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
